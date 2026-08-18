@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --grid-color: rgba(28, 25, 23, 0.05);
+  }
+  html { font-family: 'Inter', system-ui, sans-serif; }
+  body {
+    @apply bg-cream-50 text-ink-800 antialiased;
+    background-image:
+      linear-gradient(var(--grid-color) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg border border-ink-100 shadow-card;
+  }
+  .stat-label {
+    @apply text-[11px] uppercase tracking-[0.14em] text-ink-400 font-medium;
+  }
+  .data-table {
+    @apply w-full text-sm;
+  }
+  .data-table thead th {
+    @apply text-[10px] uppercase tracking-[0.12em] font-medium text-ink-400 text-left px-4 py-2.5 border-b border-ink-100 bg-ink-50/50;
+  }
+  .data-table tbody td {
+    @apply px-4 py-3 border-b border-ink-100/60;
+  }
+  .data-table tbody tr:hover {
+    @apply bg-ink-50/40;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-all px-3.5 py-2;
+  }
+  .btn-primary {
+    @apply btn bg-ink-900 text-cream-50 hover:bg-ink-800;
+  }
+  .btn-secondary {
+    @apply btn bg-white border border-ink-200 text-ink-700 hover:border-ink-300 hover:bg-ink-50;
+  }
+  .btn-accent {
+    @apply btn bg-forest-600 text-white hover:bg-forest-700;
+  }
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[11px] font-medium border;
+  }
+  .input {
+    @apply w-full rounded-md border border-ink-200 bg-white px-3 py-2 text-sm placeholder:text-ink-300 focus:border-ink-400 focus:outline-none focus:ring-2 focus:ring-ink-200 transition-colors;
+  }
+  .section-heading {
+    @apply font-display text-3xl text-ink-900 leading-none;
+  }
+  .section-subheading {
+    @apply text-ink-500 text-sm mt-1;
+  }
+}
+
+/* Scrollbar refinement */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { @apply bg-transparent; }
+::-webkit-scrollbar-thumb { @apply bg-ink-200 rounded; }
+::-webkit-scrollbar-thumb:hover { @apply bg-ink-300; }

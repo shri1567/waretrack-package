@@ -3,9 +3,7 @@
 -- File: 02_functions.sql
 -- Purpose: Reusable business logic functions
 -- =====================================================================
-
 USE waretrack_db;
-
 DELIMITER $$
 
 -- =====================================================================

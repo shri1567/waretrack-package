@@ -214,4 +214,4 @@ MIT — feel free to fork, adapt, or use as a reference for similar coursework o
 
 ## Credits
 
-Built by **Ayush Garg** as a Database Systems course project at BITS Pilani Dubai Campus, with an intentional focus on going beyond the typical CRUD-app brief — proper normalization, real transaction semantics, and analytics-grade SQL.
+Built by **Ayush Garg , Vansh Singla ,Shrihari Priya** as a Database Systems course project at BITS Pilani Dubai Campus, with an intentional focus on going beyond the typical CRUD-app brief — proper normalization, real transaction semantics, and analytics-grade SQL.
